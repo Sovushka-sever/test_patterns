@@ -2,7 +2,7 @@ import random
 
 from russian_names import RussianNames
 
-SPEED = (0, 5, 7, 8, 26, 33, 36, 40)
+SPEED = (0, 5, 7, 8, 21, 26, 30, 33, 36, 40)
 FORSE = (50, 0, 66, 79, 100)
 
 
@@ -67,7 +67,7 @@ class Hurricane(object):
 
     def drive(self):
         print('\n')
-        if self.energy._speed > 33:
+        if self.energy._speed >= 33:
             while self.energy._speed >= 0 and self.component.forse > 0:
                 print(f'Ураган по имени {self.name} двигается в сторону города')
                 print(f'Но сила ветра начинает стихать {self.energy._speed} м/с')
@@ -75,9 +75,10 @@ class Hurricane(object):
                 self.component.forse -= 5
             self.stop()
             self.notification()
-        elif 21 > self.energy._speed <= 33:
+        elif 21 < self.energy._speed < 33:
             print(f'На город обрушился шторм скоростью {self.energy._speed} м/с')
-        elif 11 >= self.energy._speed <= 21:
+            self.notification()
+        elif 11 <= self.energy._speed <= 21:
             print(f'В городе был шквалистый ветер скоростью {self.energy._speed} м/с')
         elif self.energy._speed == 0:
             print(f'Полный штиль')

@@ -78,7 +78,7 @@ class Hurricane(object):
         elif 21 > self.energy._speed <= 33:
             print(f'На город обрушился шторм скоростью {self.energy._speed} м/с')
         elif 11 >= self.energy._speed <= 21:
-            print(f'В городу был шкавлистый ветер скоростью {self.energy._speed} м/с')
+            print(f'В городе был шквалистый ветер скоростью {self.energy._speed} м/с')
         elif self.energy._speed == 0:
             print(f'Полный штиль')
         else:

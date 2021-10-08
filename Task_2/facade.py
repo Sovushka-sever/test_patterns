@@ -74,10 +74,10 @@ class Hurricane(object):
                 self.energy._speed -= 10.5
                 self.component.forse -= 5
             self.stop()
-            self.notification()
+            self.need.status_check()
         elif 21 < self.energy._speed < 33:
             print(f'На город обрушился шторм скоростью {self.energy._speed} м/с')
-            self.notification()
+            self.need.status_check()
         elif 11 <= self.energy._speed <= 21:
             print(f'В городе был шквалистый ветер скоростью {self.energy._speed} м/с')
         elif self.energy._speed == 0:
@@ -87,9 +87,6 @@ class Hurricane(object):
 
     def stop(self):
         print('\nВсё стихло')
-
-    def notification(self):
-        self.need.status_check()
 
 
 def main():

@@ -66,22 +66,36 @@ class Hurricane(object):
             print('\n но осталась тихая погода')
 
     def drive(self):
+
         print('\n')
+
         if self.energy._speed >= 33:
+
             while self.energy._speed >= 0 and self.component.forse > 0:
+
                 print(f'Ураган по имени {self.name} двигается в сторону города')
                 print(f'Но сила ветра начинает стихать {self.energy._speed} м/с')
+
                 self.energy._speed -= 10.5
                 self.component.forse -= 5
+
             self.stop()
             self.need.status_check()
+
         elif 21 < self.energy._speed < 33:
+
             print(f'На город обрушился шторм скоростью {self.energy._speed} м/с')
+
             self.need.status_check()
+
         elif 11 <= self.energy._speed <= 21:
+
             print(f'В городе был шквалистый ветер скоростью {self.energy._speed} м/с')
+
         elif self.energy._speed == 0:
+
             print(f'Полный штиль')
+
         else:
             print(f'Был легкий и свежий бриз')
 

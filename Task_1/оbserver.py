@@ -29,6 +29,7 @@ class NotificationSystem:
         self.subscribers[who] = callback
 
     def shutdown(self, who):
+
         print(f'Вы отключили систему оповещения')
         del self.subscribers[who]
 

@@ -46,8 +46,8 @@ class Films:
 def main():
     films = Films()
 
-    for color in films:
-        print(color)
+    for film in films:
+        print(film)
 
 
 if __name__ == '__main__':
